@@ -4,7 +4,7 @@ setlocal
 set PYTHONUTF8=1
 :: Force path to the directory where the batch file is located
 cd /d "%~dp0"
-title LMS AI Assistant - Final Stable Version
+title LMS AI Assistant - Final Fix for Pip v21
 
 :: 1. Check for Admin Privileges
 net session >nul 2>&1
@@ -37,10 +37,10 @@ if not exist "venv" (
 )
 call venv\Scripts\activate || goto ERROR
 
-:: 5. Install Dependencies (Progress bar disabled to avoid Encoding Error)
-echo [+] Checking requirements...
-python -m pip install --upgrade pip --no-warn-script-location >nul
-pip install -r requirements.txt --no-progress-bar || goto ERROR
+:: 5. Install Dependencies (Using -q to avoid Progress Bar Encoding Error)
+echo [+] Checking and installing requirements...
+python -m pip install --upgrade pip -q >nul
+pip install -r requirements.txt -q || goto ERROR
 
 :: 6. Run Application
 echo ======================================================

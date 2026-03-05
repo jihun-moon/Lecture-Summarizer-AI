@@ -17,7 +17,7 @@
 컴퓨터 소리를 분석 가능한 파일로 변환해 주는 필수 도구입니다.
 
 1. [다운로드 링크](https://www.google.com/search?q=https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z)를 클릭하여 압축 파일을 받습니다.
-2. **내 PC > 로컬 디스크 (C:)** 에 **`ffmpeg`**라는 새 폴더를 만듭니다.
+2. **내 PC > 로컬 디스크 (C:)** 에 **ffmpeg**라는 새 폴더를 만듭니다.
 3. 압축 파일 안에 있는 `bin` 폴더 속 파일들(`ffmpeg.exe` 등)을 복사해서 **`C:\ffmpeg\bin`** 경로에 붙여넣습니다.
 * **최종 경로 확인**: 내 컴퓨터에 `C:\ffmpeg\bin\ffmpeg.exe` 파일이 존재해야 합니다.
 

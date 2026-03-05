@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
-from recorder import record_system_audio
-from transcriber import transcribe_audio
+from src.recorder import record_system_audio
+from src.transcriber import transcribe_audio
 
 def main():
     # 1. 환경 설정

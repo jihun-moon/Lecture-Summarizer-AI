@@ -14,7 +14,7 @@
 컴퓨터 소리를 분석 가능한 파일로 변환해 주는 필수 도구입니다.
 
 1. **다운로드**: [FFmpeg Windows Builds (GitHub)](https://github.com/BtbN/FFmpeg-Builds/releases) 페이지에 접속합니다.
-2. 목록에서 **`ffmpeg-n7.1-latest-win64-gpl-shared-7.1.zip`** (또는 유사한 이름의 .zip 파일)을 클릭해 다운로드합니다.
+2. 목록에서 **`ffmpeg-master-latest-win64-gpl-shared.zip`** (또는 유사한 이름의 .zip 파일)을 클릭해 다운로드합니다.
 3. **폴더 생성**: `내 PC` > `로컬 디스크 (C:)`에 **`ffmpeg`** 라는 새 폴더를 만듭니다.
 4. **파일 복사**: 다운로드한 압축 파일의 **`bin`** 폴더 안에 있는 `ffmpeg.exe`, `ffplay.exe`, `ffprobe.exe` 파일들을 복사해서 **`C:\ffmpeg\bin`** 경로에 붙여넣습니다.
 * **최종 경로 확인**: 내 컴퓨터에 `C:\ffmpeg\bin\ffmpeg.exe` 파일이 존재해야 합니다.

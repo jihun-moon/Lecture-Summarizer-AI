@@ -6,14 +6,14 @@
 
 프로그램을 실행하는 기본 엔진입니다.
 
-* [Python 공식 사이트](https://github.com/BtbN/FFmpeg-Builds/releases)에서 최신 버전을 다운로드합니다.
+* [Python 공식 사이트](https://www.python.org/downloads/)에서 최신 버전을 다운로드합니다.
 * **[주의]** 설치 파일을 실행할 때, 하단의 **`Add Python to PATH`** 체크박스를 반드시 체크하고 설치하세요. 이 체크를 누락하면 프로그램이 실행되지 않습니다.
 
 #### 2. FFmpeg 설치 (GitHub에서 직접 받기)
 
 컴퓨터 소리를 분석 가능한 파일로 변환해 주는 필수 도구입니다.
 
-1. **다운로드**: [FFmpeg Windows Builds (GitHub)](https://www.google.com/search?q=https://github.com/Bebbbo/ffmpeg-builds/releases) 페이지에 접속합니다.
+1. **다운로드**: [FFmpeg Windows Builds (GitHub)](https://github.com/BtbN/FFmpeg-Builds/releases) 페이지에 접속합니다.
 2. 목록에서 **`ffmpeg-n7.1-latest-win64-gpl-shared-7.1.zip`** (또는 유사한 이름의 .zip 파일)을 클릭해 다운로드합니다.
 3. **폴더 생성**: `내 PC` > `로컬 디스크 (C:)`에 **`ffmpeg`** 라는 새 폴더를 만듭니다.
 4. **파일 복사**: 다운로드한 압축 파일의 **`bin`** 폴더 안에 있는 `ffmpeg.exe`, `ffplay.exe`, `ffprobe.exe` 파일들을 복사해서 **`C:\ffmpeg\bin`** 경로에 붙여넣습니다.

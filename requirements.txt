@@ -1,0 +1,11 @@
+# 오디오 캡처 및 처리
+soundcard
+soundfile
+numpy
+
+# OpenAI Whisper (음성 인식 AI)
+openai-whisper
+
+# (선택) 모델 구동을 위한 가속 라이브러리
+torch
+setuptools

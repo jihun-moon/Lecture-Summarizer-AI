@@ -1,2 +1,16 @@
-# Lecture-Summarizer-AI
-LMS 강의 실시간 녹음 및 OpenAI Whisper 기반 자동 요약 도구 | Real-time LMS lecture recording and automated transcription/summarization tool using OpenAI Whisper
+## 🛠️ Setup Guide (사용자 가이드)
+
+### 1. FFmpeg 설치 (필수)
+본 프로그램은 음성 처리를 위해 FFmpeg가 필요합니다.
+1. [FFmpeg 공식 사이트](https://ffmpeg.org/download.html)에서 Windows용 빌드를 다운로드합니다.
+2. 압축을 풀고 `bin` 폴더 내의 파일들을 **`C:\ffmpeg\bin`** 경로에 넣습니다.
+
+### 2. 실행 방법
+별도의 파이썬 명령어를 입력할 필요 없이 아래 파일만 실행하면 됩니다.
+1. 본 레포지토리를 다운로드(Clone)합니다.
+2. **`start_lms.bat`** 파일을 **마우스 우클릭 > 관리자 권한으로 실행**합니다.
+3. 자동으로 환경 변수 등록, 가상환경 생성, 라이브러리 설치가 진행된 후 프로그램이 시작됩니다.
+
+### 3. 녹음 설정 체크
+- 윈도우 설정에서 **'스테레오 믹스'** 장치가 활성화되어 있는지 확인하세요.
+- 강의 영상의 소리가 스피커나 이어폰을 통해 출력되고 있어야 녹음이 가능합니다.

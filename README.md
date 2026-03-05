@@ -6,7 +6,7 @@
 
 프로그램을 실행하는 기본 엔진입니다.
 
-* [Python 공식 사이트](https://www.python.org/downloads/)에서 최신 버전을 다운로드합니다.
+* [Python 공식 사이트](https://github.com/BtbN/FFmpeg-Builds/releases)에서 최신 버전을 다운로드합니다.
 * **[주의]** 설치 파일을 실행할 때, 하단의 **`Add Python to PATH`** 체크박스를 반드시 체크하고 설치하세요. 이 체크를 누락하면 프로그램이 실행되지 않습니다.
 
 #### 2. FFmpeg 설치 (GitHub에서 직접 받기)

@@ -6,19 +6,17 @@
 
 프로그램을 실행하는 기본 엔진입니다.
 
-1. [Python 공식 사이트](https://www.python.org/downloads/)에서 최신 버전을 다운로드합니다.
-2. 설치 파일을 실행할 때, **하단의 `Add Python to PATH` 체크박스를 반드시 체크**하고 설치하세요.
-* *주의: 이 체크를 누락하면 프로그램이 실행되지 않습니다.*
+* [Python 공식 사이트](https://www.python.org/downloads/)에서 최신 버전을 다운로드합니다.
+* **[주의]** 설치 파일을 실행할 때, 하단의 **`Add Python to PATH`** 체크박스를 반드시 체크하고 설치하세요. 이 체크를 누락하면 프로그램이 실행되지 않습니다.
 
-
-
-#### 2. FFmpeg 설치 (음성 처리 도구)
+#### 2. FFmpeg 설치 (GitHub에서 직접 받기)
 
 컴퓨터 소리를 분석 가능한 파일로 변환해 주는 필수 도구입니다.
 
-1. [다운로드 링크](https://www.google.com/search?q=https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z)를 클릭하여 압축 파일을 받습니다.
-2. **내 PC > 로컬 디스크 (C:)** 에 **'ffmpeg'** 라는 새 폴더를 만듭니다.
-3. 압축 파일 안에 있는 `bin` 폴더 속 파일들(`ffmpeg.exe` 등)을 복사해서 **`C:\ffmpeg\bin`** 경로에 붙여넣습니다.
+1. **다운로드**: [FFmpeg Windows Builds (GitHub)](https://www.google.com/search?q=https://github.com/Bebbbo/ffmpeg-builds/releases) 페이지에 접속합니다.
+2. 목록에서 **`ffmpeg-n7.1-latest-win64-gpl-shared-7.1.zip`** (또는 유사한 이름의 .zip 파일)을 클릭해 다운로드합니다.
+3. **폴더 생성**: `내 PC` > `로컬 디스크 (C:)`에 **`ffmpeg`** 라는 새 폴더를 만듭니다.
+4. **파일 복사**: 다운로드한 압축 파일의 **`bin`** 폴더 안에 있는 `ffmpeg.exe`, `ffplay.exe`, `ffprobe.exe` 파일들을 복사해서 **`C:\ffmpeg\bin`** 경로에 붙여넣습니다.
 * **최종 경로 확인**: 내 컴퓨터에 `C:\ffmpeg\bin\ffmpeg.exe` 파일이 존재해야 합니다.
 
 
@@ -43,7 +41,7 @@
 
 1. 본 프로젝트의 폴더 안에서 **`start_lms.bat`** 파일을 찾습니다.
 2. 해당 파일을 마우스 우클릭한 후 **[관리자 권한으로 실행]** 을 클릭합니다.
-* *관리자 권한이 있어야 자동으로 환경 변수(FFmpeg 경로)를 등록하고 가상환경을 구축합니다.*
+* **관리자 권한**이 있어야 자동으로 FFmpeg 경로를 시스템에 등록하고 필요한 라이브러리를 설치합니다.
 
 
 3. 검은색 창(터미널)이 뜨면 화면 안내에 따라 **강의명**과 **녹음 시간**을 입력하세요.
@@ -52,7 +50,7 @@
 
 ### 📂 프로젝트 구조 (Project Structure)
 
-* **`main.py`**: 전체 프로그램 실행의 핵심 진입점입니다.
+* **`main.py`**: 프로그램 실행의 핵심 진입점입니다.
 * **`recordings/`**: 녹음 완료된 음성 파일(`.wav`)이 저장되는 폴더입니다.
 * **`transcripts/`**: AI가 변환한 텍스트 강의 대본(`.txt`)이 저장되는 폴더입니다.
 
@@ -61,6 +59,6 @@
 ### 👤 제작자 (Author)
 
 * **Jihun Moon** - Computer Software Student
-* 학생용 포트폴리오 및 학습 보조용으로 제작되었습니다.
+* 학생용 포트폴리오 및 학습 보조용 오픈소스 프로젝트입니다.
 
 ---

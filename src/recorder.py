@@ -1,7 +1,6 @@
 import soundcard as sc
 import soundfile as sf
 import numpy as np
-import time
 from tqdm import tqdm
 
 def record_system_audio(output_path, duration_minutes=60, sample_rate=48000):

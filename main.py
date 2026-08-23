@@ -35,7 +35,9 @@ def merge_transcripts():
         try:
             indices = [int(x.strip()) for x in selection.split(',')]
             to_merge = [files[i-1] for i in indices if 1 <= i <= len(files)]
-        except:
+        except ValueError:
+            # 숫자가 아닌 값이 섞인 경우만 여기로 온다.
+            # 범위는 위 조건식이 거르므로 IndexError 는 나지 않는다.
             print("❌ 잘못된 입력입니다.")
             return
 

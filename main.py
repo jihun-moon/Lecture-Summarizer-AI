@@ -6,27 +6,27 @@ from src.transcriber import transcribe_audio
 
 def show_menu():
     print("\n" + "="*40)
-    print("🎓  LMS LECTURE ASSISTANT v2.0")
+    print(" LMS LECTURE ASSISTANT v2.0")
     print("="*40)
-    print("1. 🎙️  Start New Recording (녹음 후 변환)")
-    print("2. 📝  Transcribe Existing File (기존 파일 변환)")
-    print("3. 📂  Merge Transcripts (텍스트 파일 합치기) ✨") # 신규 추가
-    print("4. ❌  Exit (종료)")
+    print("1.  Start New Recording (녹음 후 변환)")
+    print("2.  Transcribe Existing File (기존 파일 변환)")
+    print("3.  Merge Transcripts (텍스트 파일 합치기) ") # 신규 추가
+    print("4.  Exit (종료)")
     print("="*40)
-    return input("👉 Choice (1-4): ")
+    return input("Choice (1-4): ")
 
 def merge_transcripts():
     """transcripts 폴더 내의 텍스트 파일들을 하나로 병합"""
     files = sorted([f for f in os.listdir("transcripts") if f.endswith(".txt")])
     if not files:
-        print("\n⚠️ 'transcripts/' 폴더에 합칠 파일이 없습니다.")
+        print("\n'transcripts/' 폴더에 합칠 파일이 없습니다.")
         return
 
-    print("\n📂 Available Transcripts:")
+    print("\nAvailable Transcripts:")
     for i, f in enumerate(files, 1):
         print(f"{i}. {f}")
 
-    selection = input("\n🔢 합칠 번호들을 순서대로 입력 (예: 1,2,3,4) 또는 'all': ").strip()
+    selection = input("\n합칠 번호들을 순서대로 입력 (예: 1,2,3,4) 또는 'all': ").strip()
     
     to_merge = []
     if selection.lower() == 'all':
@@ -38,12 +38,12 @@ def merge_transcripts():
         except ValueError:
             # 숫자가 아닌 값이 섞인 경우만 여기로 온다.
             # 범위는 위 조건식이 거르므로 IndexError 는 나지 않는다.
-            print("❌ 잘못된 입력입니다.")
+            print("잘못된 입력입니다.")
             return
 
     if not to_merge: return
 
-    merged_name = input("📝 저장할 새 파일 이름 (확장자 제외): ").strip() or "combined_transcript"
+    merged_name = input("저장할 새 파일 이름 (확장자 제외): ").strip() or "combined_transcript"
     output_path = f"transcripts/{merged_name}.txt"
 
     with open(output_path, "w", encoding="utf-8") as outfile:
@@ -54,19 +54,19 @@ def merge_transcripts():
                 outfile.write(infile.read())
                 outfile.write("\n\n")
 
-    print(f"✅ 병합 완료: {output_path}")
+    print(f"병합 완료: {output_path}")
 
 def get_existing_files():
     files = [f for f in os.listdir("recordings") if f.endswith(".wav")]
     if not files:
-        print("\n⚠️ No recording files found in 'recordings/' folder.")
+        print("\nNo recording files found in 'recordings/' folder.")
         return None
     
-    print("\n📂 Available Recordings:")
+    print("\nAvailable Recordings:")
     for i, f in enumerate(files, 1):
         print(f"{i}. {f}")
     
-    choice = input("\n🔢 Select file number (or 'q' to cancel): ")
+    choice = input("\nSelect file number (or 'q' to cancel): ")
     if choice.isdigit() and 1 <= int(choice) <= len(files):
         return os.path.join("recordings", files[int(choice)-1])
     return None
@@ -79,7 +79,7 @@ def main():
         choice = show_menu()
 
         if choice == '1':
-            name = input("📌 Lecture Name: ").strip() or "lecture"
+            name = input("Lecture Name: ").strip() or "lecture"
             try:
                 duration = int(input("⏱️ Duration (min): ") or 60)
             except ValueError:
@@ -89,7 +89,7 @@ def main():
             audio_path = f"recordings/{timestamp}_{name}.wav"
             
             if record_system_audio(audio_path, duration):
-                convert = input("\n🚀 Transcribe right now? (y/n): ").lower()
+                convert = input("\nTranscribe right now? (y/n): ").lower()
                 if convert == 'y':
                     text_path = f"transcripts/{timestamp}_{name}.txt"
                     transcribe_audio(audio_path, text_path)
@@ -105,10 +105,10 @@ def main():
             merge_transcripts()
 
         elif choice == '4':
-            print("\n👋 Goodbye!")
+            print("\nGoodbye!")
             break
         else:
-            print("\n❌ Invalid choice.")
+            print("\nInvalid choice.")
 
 if __name__ == "__main__":
     try:

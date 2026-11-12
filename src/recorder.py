@@ -11,7 +11,7 @@ def record_system_audio(output_path, duration_minutes=60, sample_rate=48000):
     total_frames = total_seconds * sample_rate
     chunk_size = sample_rate * 2  # 2초 단위 처리로 오차 최소화
     
-    print(f"\n🎧 Speaker: {speaker.name}")
+    print(f"\nSpeaker: {speaker.name}")
     frames = []
     
     # tqdm 기반 실시간 진행바

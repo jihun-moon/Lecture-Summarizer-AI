@@ -3,10 +3,10 @@ import os
 
 def transcribe_audio(audio_path, output_text_path):
     if not os.path.exists(audio_path):
-        print(f"❌ File not found: {audio_path}")
+        print(f"File not found: {audio_path}")
         return False
 
-    print(f"\n🤖 AI Processing: {os.path.basename(audio_path)}")
+    print(f"\nAI Processing: {os.path.basename(audio_path)}")
     print("-" * 50)
     
     # 'turbo' 모델 사용 및 실시간 출력(verbose) 활성화
@@ -17,5 +17,5 @@ def transcribe_audio(audio_path, output_text_path):
         f.write(result["text"])
     
     print("-" * 50)
-    print(f"✅ Success: {output_text_path}")
+    print(f"Success: {output_text_path}")
     return True
